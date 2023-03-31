@@ -1,0 +1,151 @@
+.contactUsContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+  }
+  .mapContent {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+  }
+  .mapContent p {
+
+    padding: 2% 10% 0 10%;
+    line-height: 1.9em;
+
+  }
+  iframe{
+    width: 650px;
+    height: 650px;
+    
+  }
+  .mapContent > h1, .quoteContent >h1{
+    font-size: 3em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+  }
+  .quoteContent {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  @media screen and (max-width: 1300px){
+    .mapContent, .quoteContent,iframe {
+        width: 100%;
+      }
+    .mapContent{
+        text-align: center;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .mapContent, .quoteContent {
+      width: 100%;
+    }
+    iframe{
+        width:100%;
+        height: 40vh;
+    }
+  }
+
+  #map {
+    width: 100%;
+    height: 400px;
+  }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .costumerInfo,
+  .addressInfo {
+    width: 48%;
+  }
+  label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  select,
+  textarea {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  select {
+    width: 100%;
+    margin-top: 15px;
+  }
+  #state, #contactMethod ,#contactTime{
+    margin-top:0;
+  }
+  textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  form h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .costumerInfo, .additionalContent,.addressInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .projectDetails{
+    display: flex;
+    flex-direction: row;
+  }
+  .dropdownContent{
+    margin: 0 5px 0 5px;
+  } 
+  @media screen and (max-width:440px) {
+
+    form {
+      margin: 0;
+      width: 100%;
+    }
+  }

@@ -1,0 +1,452 @@
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Set the background image to cover the whole container */
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+/* Add an overlay on top of the background image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* Make it semi-transparent */
+  z-index: 1;
+}
+/* Center the content */
+.content1 {
+  text-align: center;
+}
+
+/* Add some styles for the heading */
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Add some styles for the paragraph */
+.p1 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Add some styles for the button */
+.content1Btn {
+  color: #fff;
+  background-color: #848688;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor:pointer ;
+}
+button {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+/* Add some styles for the breakpoint line */
+.brkLine {
+  border-top: 2px solid #fff;
+  margin: 1rem auto;
+  width: 50%;
+}
+
+/* Add some styles to give it a construction website theme/look */
+.main {
+  font-family: Arial, sans-serif;
+}
+
+.content1 {
+  max-width: 800px;
+  padding: 3rem;
+  background-color: rgba(96,125,139,8); /* Make it semi-transparent */
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.content1Btn:hover {
+  background-color: #a2a4a5;
+}
+
+@media (max-width: 768px) {
+  .content1 {
+    padding: 1rem;
+    margin: 3rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .p1 {
+    font-size: 1rem;
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+/********Container 2 CSS Styles***********/
+
+.content2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  background-color: #f2f2f2;
+}
+
+.subContent2 {
+  width: 50%;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-basis: 50%;
+}
+.constructionTheme {
+  background-color: #607d8b ;
+  padding: 20px;
+  border-radius: 25px;
+  
+}
+
+
+.constructionTheme h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+
+}
+
+.constructionTheme p {
+  font-size: 1.7em;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding:20px;
+}
+
+.btnConstruction {
+  background-color: #848688;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  grid-gap: 10px;
+  width: 50%;
+  padding: 30px;
+  flex-grow: 1;
+  border: 3px solid #d3d3d3;
+  
+}
+
+.gridItem {
+  overflow: hidden;
+  border: 4px solid #ddd;
+  margin: 10px;
+  min-width: 100px;
+}
+
+.gridItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.gridItem video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+.gridItem img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1470px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 250px);
+  }
+  
+}
+@media (max-width: 1024px) {
+  .subContent2,
+  .galleryGrid {
+    width: 100%; /* Set the width to 100% for smaller screens */
+    
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 250px);
+  }
+  .content2{
+    padding: 0;
+  }
+  .subContent2{
+    padding: 20px;
+  }
+  .content2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:440px){
+  .constructionTheme h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    left:-50px;
+  }
+  
+  .constructionTheme p {
+    font-size: 1em;
+    padding: 20px;
+    margin-bottom: 20px;
+    line-height: 1.9em;
+  }
+  .btnConstruction {
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .subContent2,
+  .galleryGrid {
+    width: 100%; /* Set the width to 100% for smaller screens */
+    
+    grid-template-columns: repeat(2, .8fr);
+    grid-template-rows: repeat(3, 200px);
+  }
+  .galleryGrid {
+    padding: 0px;
+   grid-gap: 5px;
+  }
+  .gridItem {
+    margin: 5px;
+  }
+  
+  
+
+}
+
+/******************Content 3 CSS Styles*********************/
+.content3 {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.content3P p {
+  font-size: 1.5rem;
+  margin: 0 10% 50px 10%;
+  line-height: 1.8em;
+}
+
+.content3 h1 {
+  padding-bottom: 30px;
+  font-size: 2.5em;
+  color: black;
+}
+
+.servicesContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: calc((100% / 3) - 30px);
+  margin: 15px;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.service img {
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.service h2 {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.service p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  padding-bottom: 30px;
+  line-height: 1.9em;
+}
+
+.btnServices {
+  display: inline-block;
+  background-color:rgba(96,125,139,.8);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btnServices:hover {
+  background-color: #0077cc;
+}
+@media screen and (max-width: 776px) {
+  .servicesContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 440px){
+  .content3P p {
+    margin: 0 5% 50px 5%;
+    font-size: 1.2em;
+    text-align: none;
+  }
+  .service p {
+    line-height: 1.9em;
+    text-align: left;
+    padding: 10px;
+    font-size: 1em;
+}
+}
+/*********************Content 4 Style CSS************************************/
+.content4 h2{
+  font-size: 2.5em;
+}
+.testContainer {
+  margin-top: 50px;
+  padding: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  
+  background-color:rgba(96,125,139,.8);
+}
+
+.testimonial {
+  width: 350px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+}
+
+.testimonial:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.testContent {
+  height: 300px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.customerDetails {
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+h2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .testContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .testimonial {
+    width: 90%;
+  }
+  .testContent{
+    height: auto;
+  }
+}
+
+@media screen and (max-width:440px){
+
+.testContainer {
+  margin-top: 50px;
+  padding: 30px;
+  padding-bottom: 20px;
+}
+.testimonial {
+  width: auto;
+  margin: 0px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.testContent {
+  height: 300px;
+  padding: 0px;
+  padding-top: 10px;
+  flex-grow: 1;
+}
+
+}
